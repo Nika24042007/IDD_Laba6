@@ -1,0 +1,13 @@
+namespace: gift-app
+storageSize: 1Gi
+postgres:
+  database: giftdb
+  user: giftuser
+  password: mysecretpassword
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 250m
+  limits:
+    memory: 512Mi
+    cpu: 500m

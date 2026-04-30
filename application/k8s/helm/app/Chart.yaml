@@ -1,0 +1,4 @@
+apiVersion: v2
+name: gift-app
+description: Wishlist
+version: 0.1.0

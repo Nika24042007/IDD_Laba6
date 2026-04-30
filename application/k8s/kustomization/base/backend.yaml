@@ -13,10 +13,6 @@ spec:
       labels:
         app: backend
     spec:
-      initContainers:
-        - name: wait-for-postgres
-          image: postgres:16-alpine
-          command: ['sh', '-c', 'until pg_isready -h postgres-service -U giftuser; do echo waiting for postgres; sleep 2; done;']
       containers:
         - name: backend
           image: backend:latest
@@ -25,7 +21,7 @@ spec:
             - containerPort: 5000
           env:
             - name: DATABASE_URL
-              value: "postgresql://giftuser:giftpassword@postgres-service:5432/giftdb"
+              value: postgresql://giftuser:mysecretpassword@postgres-0.postgres-headless.gift-app.svc.cluster.local:5432/giftdb
             - name: FLASK_DEBUG
               value: "0"
             - name: FLASK_ENV

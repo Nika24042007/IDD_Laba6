@@ -1,0 +1,12 @@
+namespace: gift-app
+storageSize: 10Gi
+postgres:
+  database: giftdb
+  user: giftuser
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 500m
+  limits:
+    memory: 1Gi
+    cpu: 1

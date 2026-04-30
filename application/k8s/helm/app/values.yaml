@@ -1,0 +1,13 @@
+replicaCount: 1
+image:
+  repository: your-dockerhub/wishlist
+  tag: latest
+service:
+  type: ClusterIP
+  port: 80
+database:
+  host: "postgres-0.postgres-headless.wishlist-dev.svc.cluster.local"
+  port: 5432
+  name: wishlist
+  user: wishlist_user
+resources: {}

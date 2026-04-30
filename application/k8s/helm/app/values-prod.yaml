@@ -1,0 +1,8 @@
+namespace: gift-app
+replicaCount: 3
+database:
+  host: "postgres-0.postgres-headless.gift-app.svc.cluster.local"
+resources:
+  requests:
+    cpu: 250m
+    memory: 512Mi
