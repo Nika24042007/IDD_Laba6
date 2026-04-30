@@ -1,0 +1,12 @@
+node_modules/
+__pycatche__/
+bin/
+*.log
+dist/
+build/
+.next/
+out/
+coverage/
+*.sqlite
+*.db
+venv/

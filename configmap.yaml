@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: gift-app
+data:
+  POSTGRES_DB: giftdb
+  POSTGRES_USER: giftuser
+  NEXT_PUBLIC_API_URL: "http://backend-service:5000/api"
