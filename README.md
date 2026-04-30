@@ -5,25 +5,25 @@ APP-TODO/
 lab6/
 ├── infrastructure/
 │   └── postgres/
-│       ├── README.md                     (новый)
+│       ├── README.md                     
 │       ├── kustomize/
 │       │   ├── base/
-│       │   │   ├── kustomization.yaml    (новый)
-│       │   │   ├── statefulset.yaml      (из postgres.yaml, переделан)
-│       │   │   ├── service.yaml          (новый)
-│       │   │   └── secret.yaml           (пароль из secret.yaml)
+│       │   │   ├── kustomization.yaml    
+│       │   │   ├── statefulset.yaml      
+│       │   │   ├── service.yaml          
+│       │   │   └── secret.yaml           
 │       │   └── overlays/
 │       │       ├── dev/
-│       │       │   ├── kustomization.yaml (новый)
-│       │       │   └── patch-storage.yaml (новый)
+│       │       │   ├── kustomization.yaml 
+│       │       │   └── patch-storage.yaml 
 │       │       └── prod/
-│       │           ├── kustomization.yaml (новый)
-│       │           └── patch-storage.yaml (новый)
+│       │           ├── kustomization.yaml 
+│       │           └── patch-storage.yaml 
 │       └── helm/
 │           └── postgres-infra/
-│               ├── Chart.yaml            (новый)
-│               ├── values-dev.yaml       (новый)
-│               ├── values-prod.yaml      (новый)
+│               ├── Chart.yaml            
+│               ├── values-dev.yaml       
+│               ├── values-prod.yaml      
 │               └── templates/
 │                   ├── statefulset.yaml
 │                   ├── service.yaml
@@ -32,24 +32,24 @@ lab6/
     └── k8s/
         ├── kustomization/
         │   ├── base/
-        │   │   ├── kustomization.yaml    (новый)
-        │   │   ├── backend.yaml          (из backend.yaml)
-        │   │   ├── frontend.yaml         (из frontend.yaml)
-        │   │   ├── configmap.yaml        (из configmap.yaml)
-        │   │   └── ingress.yaml          (из ingress.yaml)
+        │   │   ├── kustomization.yaml    
+        │   │   ├── backend.yaml          
+        │   │   ├── frontend.yaml         
+        │   │   ├── configmap.yaml        
+        │   │   └── ingress.yaml          
         │   └── overlays/
         │       ├── dev/
-        │       │   ├── kustomization.yaml (новый)
-        │       │   └── secret.yaml       (новый, с database_url)
+        │       │   ├── kustomization.yaml 
+        │       │   └── secret.yaml       
         │       └── prod/
-        │           ├── kustomization.yaml (новый)
-        │           └── secret.yaml       (новый, с database_url для prod)
+        │           ├── kustomization.yaml 
+        │           └── secret.yaml       
         └── helm/
             └── wishlist-app/
-                ├── Chart.yaml            (новый)
-                ├── values.yaml           (новый)
-                ├── values-dev.yaml       (новый)
-                ├── values-prod.yaml      (новый)
+                ├── Chart.yaml          
+                ├── values.yaml          
+                ├── values-dev.yaml       
+                ├── values-prod.yaml     
                 └── templates/
                     ├── backend-deployment.yaml
                     ├── backend-service.yaml
